@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { GoDotFill } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import bgImg from "../assets/hamburger-494706_1280.jpg";
 import fetchMeals from "../loadData";
 
 function HomePage() {
   const [meals, setMeals] = useState([]);
   const [offset, setOffset] = useState(0);
-
+  
+  
   useEffect(() => {
     const getData = async () => {
       const fetchedMeals = await fetchMeals(offset);
@@ -94,7 +95,7 @@ function HomePage() {
             <button
               type="btn"
               className="px-2 py-1 bg-[#4268FB] hover:bg-[#8096ee] text-white rounded-md text-sm"
-           disabled >
+            >
               Create Meal Plan
             </button>
           </Link>
