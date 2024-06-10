@@ -9,7 +9,7 @@ function MealPlanPoints() {
     function createMealPlan() {
 
         // to navigate to the meal plan page
-        navigate('/home');
+        navigate('/Recommended');
 
     }
 
@@ -26,7 +26,7 @@ function MealPlanPoints() {
                     <h1 className="font-semibold text-2xl ">0 Meal Plan</h1>
                     <p className="  py-1 text-sm pb-1 ">Ready for a delicious meal? Earn 20 points per meal.</p>
                     <button onClick={createMealPlan} className="  bg-blue-700 p-1 text-white  hover:bg-blue-400 px-2 inline-block mr-5  rounded-xl  text-sm ">Create Meal Plan</button>
-                    <button onClick={mealHistory} className="bg-neutral-400 p-1 text-white px-2 hover:bg-slate-500  rounded-xl text-sm">Meal History</button> 
+                    {/* <button onClick={mealHistory} className="bg-neutral-400 p-1 text-white px-2 hover:bg-slate-500  rounded-xl text-sm">Meal History</button>  */}
                 </div>
             </div>
             
