@@ -62,17 +62,17 @@ export default function Referral() {
             notification.style.opacity = "0";
 
             // Delay before fetching points from local storage
-            setTimeout(() => {
-              const points = localStorage.getItem('Points');
-              if (points) {
-                setCopiedCount(parseInt(points));
-              }
-            }, 500);
+            // setTimeout(() => {
+            //   const points = localStorage.getItem('Points');
+            //   if (points) {
+            //     setCopiedCount(parseInt(points));
+            //   }
+            // }, 500);
           }, 1000);
           
           // Update points in localStorage
-          let points = copiedCount + 10;
-          localStorage.setItem('Points', points.toString()); 
+          // let points = copiedCount + 10;
+          // localStorage.setItem('Points', points.toString()); 
 
         } catch (error) {
           console.error('Failed to copy referral link: ', error);
