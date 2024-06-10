@@ -99,12 +99,16 @@ function HomePage() {
               Create Meal Plan
             </button>
           </Link>
+
+          <Link to={`/Recommended`}>
           <button
             type="btn"
             className="px-2 py-1 border border-blue-500 text-black bg-white  rounded-md text-sm"
-            disabled >
+            >
             Quick Meal
           </button>
+          </Link>
+          
         </div>
       </div>
     </div>

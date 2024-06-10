@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function RecommendedMealPlans() {
-  const navigate = useNavigate();
+  
   return (
     <>
       <h1 className="text-3xl text-black font-Manrope font-bold mt-4 mb-4">
