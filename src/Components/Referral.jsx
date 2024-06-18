@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import suffiximg from '../assets/images/suffix.png'
+import suffiximg from '../assets/images/suffix.png';
+import Share from '../assets/Share.svg';
+import Copy from '../assets/Link.png';
 
 export default function Referral() {
     const [referralLink, setReferralLink] = useState('');
@@ -103,23 +105,34 @@ export default function Referral() {
                 <p className="font-semibold mb-2">Invite a friend</p>
                 <p className="text-sm mb-2 ">Earn 10 points for every friend that signs up.</p>
                 {isLoggedIn && (
-                <div className="bg-white border rounded-lg inline-block w-[270px] relative px-2 py-2">
-                    <input
+                <div className="flex gap-3">
+                    {/* <input
                     id="referralLink"
                     className="placeholder:text-blue-700 text-sm inline-block w-[200px] text-blue-700"
                     type="text"
                     placeholder="https://example.com/blessing"
                     value={referralLink}
                     readOnly
-                    />
-                    <button onClick={copyReferralLink} className="bg-black hover:bg-slate-700 text-white rounded-lg text-sm pb-1 px-1 absolute right-2">
+                    /> */}
+                    {/* <button onClick={copyReferralLink} className="bg-black hover:bg-slate-700 text-white rounded-lg text-sm pb-1 px-1 absolute right-2">
                     Copy
-                    </button>
+                    </button> */}
                     {/* pop up notification */}
+                    <div>
+                      <button className="inline-flex align-center gap-3 rounded-2xl bg-white border border-blue-700 w-[96px] h-[35px] p-1">
+                        <img src="Share" className='' />Share</button>
+                    </div>
+
+                    <div>
+                     <button onClick={copyReferralLink} className="inline-flex align-center gap-3 bg-white border border-blue-700 rounded-2xl w-[117px] h-[35px] p-1">
+                      <img src="Copy" className=''/>Copy link
+                     </button>
+                    </div>
                     <div id="copyNotification" className="fixed top-[236px] right-[138px] text-xs text-green-700 opacity-0  transition-opacity duration-700">Copied!</div>
                 </div>
                 )}
-                {!isLoggedIn && <div className="bg-white border rounded-lg inline-block w-[270px] relative px-2 py-2">
+                {!isLoggedIn && 
+                <div className="bg-white border rounded-lg inline-block w-[270px] relative px-2 py-2">
                     <input
                       className="placeholder:text-blue-700 text-sm inline-block w-[200px] text-blue-700"
                       type="text"
@@ -137,3 +150,4 @@ export default function Referral() {
         </>
     );
 }
+ 

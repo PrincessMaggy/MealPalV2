@@ -59,7 +59,7 @@ function App() {
             }
           />
           <Route
-            path="/history"
+            path="/mealHistory"
             element={
               <PrivateRoute>
                 <MealHistoryPage />
