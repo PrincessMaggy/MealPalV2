@@ -77,7 +77,7 @@ const Menu = () => {
               Profile
             </Link>
             <Link
-              to="/saved"
+              to="/home"
               className="py-1 cursor-pointer hover:text-neutral-900"
             >
               Bookmark
