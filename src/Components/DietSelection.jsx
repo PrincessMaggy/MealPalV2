@@ -1,40 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-const DietSelection = ({ onDietSelected }) => {
+const DietSelection = () => {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   const dietOptions = [
-    { name: "Recommended", description: "" },
-    { name: "Popular", description: "" },
     { name: "Vegan", description: "Only eat plant-based food" },
     { name: "Vegetarian", description: "Don’t eat meat and fish" },
     { name: "Flexitarian", description: "Occasionally eats meat and fish" },
     { name: "Pescetarian", description: "Don’t eat meat but eats fish" },
     { name: "Omnivore", description: "Eats meat and almost everything" },
-    { name: "Lactose-free", description: "Don't eat Cheese, Cream and Milk" },
-    { name: "Classic", description: "Tomato soup, Beaf stew, Chicken noodles soup" },
-    { name: "Keto", description: "Eat Vegetables, Avocados, Seafood" },
-    { name: "LowCarbs", description: "Eat Whole eggs, Nuts, Strawberries" },
   ];
 
-  const handleOptionSelect = (optionName) => {
-    const newSelectedOptions = selectedOptions.includes(optionName)
-      ? selectedOptions.filter(item => item !== optionName)
-      : [...selectedOptions, optionName];
-    
-    setSelectedOptions(newSelectedOptions);
-    onDietSelected(newSelectedOptions.length > 0); 
+  const handleOptionSelect = (option) => {
+    // Toggle the option in and out of selectedOptions
+    if (selectedOptions.includes(option)) {
+      setSelectedOptions(selectedOptions.filter(item => item !== option));
+    } else {
+      setSelectedOptions([...selectedOptions, option]);
+    }
   };
-
-  useEffect(() => {
-  }, [selectedOptions]);
 
   return (
     <div className="min-h-screen w-screen px-4 flex flex-col justify-center lg:items-center">
       <h2 className="mb-4 mt-10 text-2xl font-bold text-left lg:text-center">
         What are your dietary preferences?
       </h2>
-      <div className="flex flex-col gap-4 mb-10 w-full max-w-md">
+      <div className="flex flex-col gap-4 lg:gap-8 mb-10">
         {dietOptions.map((option) => (
           <div
             key={option.name}

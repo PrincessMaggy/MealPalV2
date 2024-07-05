@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const AgeAndBMI = ({ onBmiCalculated }) => {
+const AgeAndBMI = ({ onBmiCalculated, navigate }) => {
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [bmi, setBMI] = useState("");
-  const [bmiStatus, setBmiStatus] = useState("");
+  const [bmiStatus, setBmiStatus] = useState(""); 
 
   const calculateBMI = () => {
     if (height && weight) {
       const heightInMeters = parseFloat(height);
-      const weightInKg = parseFloat(weight);
+      const weightInKg = parseFloat(weight); 
 
       if (heightInMeters <= 0 || weightInKg <= 0) {
         toast.error("Height and weight must be greater than zero");
         return;
       }
-
+      
       const bmiValue = (weightInKg / (heightInMeters ** 2)).toFixed(2);
       setBMI(bmiValue);
       localStorage.setItem("bmi", bmiValue);
@@ -58,6 +58,11 @@ const AgeAndBMI = ({ onBmiCalculated }) => {
 
   const handleWeightChange = (e) => {
     setWeight(e.target.value);
+  };
+
+  const handleSignUpNavigation = () => {
+    localStorage.setItem("previousRoute", window.location.pathname);
+    navigate("/signup");
   };
 
   return (

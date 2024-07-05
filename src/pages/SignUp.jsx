@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { auth, db } from "../firebase/firebase";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
@@ -16,7 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
 import Back from "../assets/back.png";
 import Loader from "../Components/OnboardingLoader";
-import {  doc, increment, updateDoc } from "firebase/firestore";
+import { Firestore, doc, increment, updateDoc } from "firebase/firestore";
 
 const fetchPointsFromFirebase = async (refferalUid) => {
   await updateDoc(doc(db, "users", refferalUid), {

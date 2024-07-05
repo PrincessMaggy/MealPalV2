@@ -99,7 +99,7 @@ function Preview() {
       </div>
 
       <div className="flex align-center justify-center gap-2 ">
-        <Link to= '/mealhistory'>
+        <Link to= '/savedmeal'>
         <button
           type="btn"
           className="px-2 py-1 bg-[#4268FB] text-white rounded-md text-sm"

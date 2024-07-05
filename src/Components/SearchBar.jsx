@@ -11,7 +11,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="flex w-full px-4 py-5 items-center gap-4 border-b border-solid border-[#F4F4F4]">
+    <div className="flex w-[375px] px-4 py-5 items-center gap-4 border-b border-solid border-[#F4F4F4]">
       <input
         type="text"
         value={searchTerm}

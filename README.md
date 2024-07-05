@@ -19,7 +19,7 @@ Cohort 9 Pro Capstone Project. The app is designed to incentivize user engagemen
 ### Team One
 
 - Achi Faith [IfyFaith24](https://github.com/ifyfaith24)
-- Chinechelum Eucharia [Eucharian8](https://github.com/Eucharian8)
+- Nwachukwu Chinechelum Eucharia [Eucharian8](https://github.com/Eucharian8)
 
 ### Team Two
 
@@ -53,9 +53,13 @@ Cohort 9 Pro Capstone Project. The app is designed to incentivize user engagemen
 
 - Bookmark : [Joyfuol] Created bookmark option for users to save favorite meals and learn how to prepare them.
 
-  - Meal Plan Points: [sarahlutaaya256] developed the functionality related to meal plan points, including tracking user activities and assigning points accordingly.
+- Meal Plan Points: [sarahlutaaya256] developed the functionality related to meal plan points, including tracking user activities and assigning points accordingly.
 
-  - Referral Link, Copy Link and Share Button: [Eucharian8] made the referral link redirect the new user to the signup page. Improved the UI of the referral link copy button and added a share button.
+- Referral Link: [Eucharian8] Made the referral link redirect the new user to the signup page. Each referral link is generated with the User's ID that is stored in the firebase database, making it unique to each user.
+
+- Copy Link and Share Button: [Eucharian8] Improved the UI of the referral link copy button and added a share button.
+
+- Feedback API: [Eucharian8] Added a feedback form api that captures all feedbacks sent in the feeback section of the app. Each user gets a reply after their feedback has been received.
 
 # Features
 
@@ -85,7 +89,7 @@ If you already have an account, log in using these steps:
 ### Referral Feature
 
 - Automatically generates a referral link for logged-in users.
-- Referral links are unique to the each user because it's been generated with the User ID.
+- Referral links are unique to the each user because it's been generated with the User's ID.
 - Users earn points for every successful referral.
 - Points can be redeemed for rewards.
 - Users can copy their referral link to the clipboard.
@@ -98,77 +102,6 @@ If you already have an account, log in using these steps:
 - When a referral signs up using the referral link, the referring user earns points.
 - Points are displayed in the UI and stored in firebase database.
 - Users can redeem their points for rewards by clicking the "Redeem Points" button.
-
-## Team Members
-
-### Team Alpha
-
-- Ayomikun Adeosun [ayomikun-ade](https://www.github.com/ayomikun-ade)
-- Ireoluwa Adegoke [Adereb-web](https://www.github.com/Adereb-web)
-- Fracesca Ezih [Cesca04](https://www.github.com/Cesca04)
-
-### Team Beta
-
-- Frieda Odagboyi [friedaodagboyi](https://www.github.com/friedaodagboyi)
-
-### Team Gamma
-
-- Divine Dibobie [divinedibobie](https://github.com/divinedibobie)
-- Elizabeth Godfrey [miyemicodes](https://github.com/miyemicodes)
-- Zahidat Alao [Ayomii1](https://github.com/Ayomii1)
-
-### Team Delta
-
-- Babatunde Maryam [Joyfuol](https://github.com/Joyfuol)
-
-### Team ETA - Gamification
-
-- Anezi Ugwuomarima [janeAnezi](https://www.github.com/janeAnezi)
-- Sarah Lutaaya [sarahlutaaya256](https://www.github.com/sarahlutaaya256)
-- Favour Joseph []()
-
-
-### Team Zeta
-
-- Ola Esther Pelumi [ESTHER-OLA](https://github.com/ESTHER-OLA/c8Project)
-- Joy Wilson []()
-- Moromoke Bello [moromoke01](https://github.com/moromoke01/c8Project/tree/master)
-
-### Team Epsilon
-
-- Chioma Marycynthia []()
-
-
-### Team One
-
-- Achi Faith [IfyFaith24](https://github.com/ifyfaith24)
-- Chinechelum Eucharia [Eucharian8](https://github.com/Eucharian8)
-
-### Team Two
-
-- Babatunde Maryam [Joyfuol](https://github.com/Joyfuol)
-
-
-  # Overview
-
-  The app is designed to incentivize user engagement through gamification features such as referral links, point awards, and meal plan points.
-
-  # Team Contributions
-
-  - Profile : [Joyfuol] Worked on the profile input section by changing the dummy text to a placeholder which allows users to input their details without having to delete any text.
-
-- Allergies : [Joyfuol] Added more allergies to ensure users with different ailments can benefit from the app.
-
-- Diet Options : [Joyfuol] Included more diets to the dietary options. This will enable 70% of individuals to benefit from the app.
-
-- Meal list : [Joyfuol] Updated the recommended meal plans by adding different types of meal ranging from African dishes, Chinese dishes ...
-
-
-  - Meal Plan Points: [sarahlutaaya256] developed the functionality related to meal plan points, including tracking user activities and assigning points accordingly.
-
-  - Referral Link, Copy Link and Share Button: [Eucharian8] made the referral link redirect the new user to the signup page. Improved the UI of the referral link copy button and added a share button.
-
-  # Features
 
   - Referral System
     Users can generate unique referral links that includes their User's ID.
@@ -214,7 +147,7 @@ If you already have an account, log in using these steps:
 - HTML/CSS: Markup and styling languages for structuring and styling the UI.
 - Firebase: Used to store and retrieve points for each user.
 - API: A food api may analyze recipe costs and nutritional values,classify foods into allergens,compute meal plans, etc. Spoonacular food and recipe api is the only API you will ever need. Its effficient and reliable.
-- API: A form api that captures all feedback sent in the feedback section of the app. Each user gets a reply after their feedback has been received.
+- API: A feedback form api that captures all feedback sent in the feedback section of the app. Each user gets a reply after their feedback has been received.
 
 ## Languages, Framework and Tools
 

@@ -1,8 +1,8 @@
-import  { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import share from "../assets/meal-history/Share.png";
 import link from "../assets/meal-history/Link.png";
 import { useAuth } from "../Contexts/AuthContext";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 
 export default function Referral() {
@@ -171,4 +171,3 @@ export default function Referral() {
     </>
   );
 }
-

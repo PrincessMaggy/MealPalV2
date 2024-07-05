@@ -11,11 +11,7 @@ import Button from "../Components/button.jsx";
 const Onboarding = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showPage, setShowPage] = useState(false);
-  const [bmiCalculated, setBmiCalculated] = useState(false); 
-  const [selectedGoal, setSelectedGoal] = useState("");
-  const [isDietSelected, setIsDietSelected] = useState(false); 
-  const [isAllergySelected, setIsAllergySelected] = useState(false); 
-  const [isHealthIssueSelected, setIsHealthIssueSelected] = useState(false); 
+  const [bmiCalculated, setBmiCalculated] = useState(false); // State to track BMI calculation
   const totalPages = 6;
 
   useEffect(() => {
@@ -34,11 +30,6 @@ const Onboarding = () => {
     setShowPage(false);
     setTimeout(() => {
       setCurrentPage(currentPage - 1);
-      if (currentPage === 3) setSelectedGoal("");
-      if (currentPage === 4) setIsDietSelected(false);
-      if (currentPage === 5) setIsAllergySelected(false);
-      if (currentPage === 6) setIsHealthIssueSelected(false);
-      if (currentPage === 7) setBmiCalculated(false); 
       setShowPage(true);
     }, 600);
   };
@@ -47,28 +38,14 @@ const Onboarding = () => {
     setBmiCalculated(true);
   };
 
-  const handleGoalSelected = (goal) => {
-    setSelectedGoal(goal);
-  };
+  const buttonContainerStyles = `
+    flex justify-center fixed bottom-4 left-0 right-0 w-full
+    transition-opacity duration-700
+  `;
 
-  const handleDietSelected = (selected) => {
-    setIsDietSelected(selected);
-  };
-
-  const handleAllergySelected = (selected) => {
-    setIsAllergySelected(selected);
-  };
-
-  const handleHealthIssueSelected = (selected) => {
-    setIsHealthIssueSelected(selected);
-  };
-
-  const isNextButtonDisabled =
-    (currentPage === 2 && selectedGoal === "") ||
-    (currentPage === 3 && !isDietSelected) ||
-    (currentPage === 4 && !isAllergySelected) ||
-    (currentPage === 5 && !isHealthIssueSelected) ||
-    (currentPage === 6 && !bmiCalculated); 
+  const buttonStyles = `
+    w-full max-w-xs
+  `;
 
   return (
     <>
@@ -89,20 +66,24 @@ const Onboarding = () => {
           }`}
         >
           {currentPage === 1 && <GetStarted onNext={changeScreen} />}
-          {currentPage === 2 && <Goal onGoalSelected={handleGoalSelected} />}
-          {currentPage === 3 && <DietSelection onDietSelected={handleDietSelected} />}
-          {currentPage === 4 && <AllergySelection onAllergySelected={handleAllergySelected} />}
-          {currentPage === 5 && <HealthIssuesForm onHealthIssueSelected={handleHealthIssueSelected} />}
+          {currentPage === 2 && <Goal onNext={changeScreen} />}
+          {currentPage === 3 && <DietSelection />}
+          {currentPage === 4 && <AllergySelection />}
+          {currentPage === 5 && <HealthIssuesForm />}
           {currentPage === 6 && <AgeAndBMI onBmiCalculated={handleBmiCalculated} />}
         </div>
 
         {currentPage > 1 && (
-          <div className={`flex justify-center fixed bottom-4 left-0 right-0 w-full transition-opacity duration-700`}>
+          <div className={buttonContainerStyles}>
             <Button
               color={"blue"}
-              btnClicked={isNextButtonDisabled ? undefined : changeScreen}
-              className={`transition-opacity duration-700 ${showPage ? "opacity-100" : "opacity-0"} w-full max-w-xs ${
-                isNextButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
+              btnClicked={
+                currentPage < totalPages 
+                  ? changeScreen 
+                  : (bmiCalculated ? changeScreen : undefined)
+              }
+              className={`transition-opacity duration-700 ${showPage ? "opacity-100" : "opacity-0"} ${buttonStyles} ${
+                currentPage === totalPages && !bmiCalculated ? "opacity-50 cursor-not-allowed" : ""
               }`}
               to={currentPage === totalPages && bmiCalculated ? "/signup" : undefined}
             >
