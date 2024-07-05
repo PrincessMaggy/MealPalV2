@@ -1,29 +1,41 @@
 import React, { useEffect } from 'react';
 import emailjs from 'emailjs-com';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
-const FeedbackForm = () => {
+const FeedbackForm = ({ onNext }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
     emailjs.init('KYgb0SF17-2P5HPAC');
   }, []);
 
-  const sendFeedback = (e) => {
+  const sendFeedback = async (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_kx1nuvi', 'template_53buy4a', e.target)
-      .then((result) => {
-        console.log(result.text);
+    try {
+      const serviceId = 'service_kx1nuvi';
+      const templateId = 'template_53buy4a';
+      const userConfirmationTemplateId = 'template_53buy4a';
+      const userId = 'KYgb0SF17-2P5HPAC';
 
-        navigate('/ThankYou');
-      }, (error) => {
-        console.log(error.text);
+      
+      await emailjs.sendForm(serviceId, templateId, e.target);
+
+      
+      await emailjs.send(serviceId, userConfirmationTemplateId, {
+        to_email: e.target.email.value, 
       });
+
+      console.log('Feedback submitted successfully');
+      onNext(); 
+    } catch (error) {
+      console.error('Error sending feedback:', error);
+    }
   };
 
   return (
-    <div className='p-6 space-y-6 w-[390px]'>
+    <div className='flex flex-col items-center justify-top mt-6 h-screen'>
+      <div className='w-[390px] bg-white shadow-md rounded-lg' >
       <form id="Feedback-form" className="p-6 space-y-6 w-[390px]" onSubmit={sendFeedback}>
         <h2 className="text-[#101010] font-manrope text-lg font-semibold">
           Share your feedback
@@ -34,10 +46,10 @@ const FeedbackForm = () => {
         <p className="text-[#777] font-manrope text-sm font-medium leading-[140%]">
           Select from list
         </p>
-        <div className="space-y-2 flex flex-col">
+        <div className="space-y-2 flex flex-col text-nowrap">
           {['Very satisfied', 'Somewhat satisfied', 'Neutral', 'Somewhat dissatisfied', 'Very dissatisfied'].map(option => (
             <label key={option} className="inline-flex items-center gap-2">
-              <input type="radio" name="satisfaction" value={option} className="form-radio" />
+              <input type="radio" name="satisfaction" value={option} className="form-radio w-4 h-4" />
               <span className="font-manrope text-sm font-normal">{option}</span>
             </label>
           ))}
@@ -50,13 +62,20 @@ const FeedbackForm = () => {
           className="w-full h-[117px] p-2 border border-gray-300 rounded-lg"
           placeholder="Write your comment..."
         ></textarea>
+
+        <Link to={"/ThankYou"}>
         <button
           type="submit"
-          className="w-full h-[40px] flex justify-center items-center rounded-lg bg-[#4268FB] text-white"
+          className="w-full h-[40px] flex justify-center mt-10 items-center rounded-lg
+           text-white border hover:bg-green-300 bg-green-700"
         >
           Submit
         </button>
+        </Link>
+        
       </form>
+      </div>
+     
     </div>
   );
 };
