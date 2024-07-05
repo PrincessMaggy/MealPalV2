@@ -43,17 +43,18 @@ If you already have an account, log in using these steps:
 ### Referral Feature
 
 - Automatically generates a referral link for logged-in users.
+- Referral links are unique to the each user because it's been generated with the User ID.
 - Users earn points for every successful referral.
 - Points can be redeemed for rewards.
 - Users can copy their referral link to the clipboard.
-- Points are stored in local storage to persist across sessions.
+- Points are now stored in firebase database to add 10 points to a user that refers a new user by signing up successfully. 
 
 #### How It Works
 
 - Upon logging in, users are automatically provided with a referral link.
 - Users can copy their referral link to the clipboard by clicking the "Copy" button.
 - When a referral signs up using the referral link, the referring user earns points.
-- Points are displayed in the UI and stored in local storage.
+- Points are displayed in the UI and stored in firebase database.
 - Users can redeem their points for rewards by clicking the "Redeem Points" button.
 
 ## Team Members
@@ -99,7 +100,7 @@ If you already have an account, log in using these steps:
 ### Team One
 
 - Achi Faith [IfyFaith24](https://github.com/ifyfaith24)
-- Chinechelum Eucharia [Eucharian8](https://github.com/Eucharian8)
+- Nwachukwu Chinechelum Eucharia [Eucharian8](https://github.com/Eucharian8)
 
 ### Team Two
 
@@ -121,14 +122,19 @@ If you already have an account, log in using these steps:
 - Meal list : [Joyfuol] Updated the recommended meal plans by adding different types of meal ranging from African dishes, Chinese dishes ...
 
 
-  - Meal Plan Points: [sarahlutaaya256] developed the functionality related to meal plan points, including tracking user activities and assigning points accordingly.
+- Meal Plan Points: [sarahlutaaya256] developed the functionality related to meal plan points, including tracking user activities and assigning points accordingly.
 
-  - Referral Link, Copy Link and Share Button: [Eucharian8] made the referral link redirect the new user to the signup page. Improved the UI of the referral link copy button and added a share button.
+- Referral Link: [Eucharian8] Made the referral link redirect the new user to the signup page.  Each referral link is generated with the User's ID that is stored in the firebase database, making it unique to each user.
+
+- Copy Link and Share Button: [Eucharian8] Improved the UI of the referral link copy button and added a share button.
+
+- Feedback API: [Eucharian8] Added a feedback form api that captures all feedback sent in the feedback section of the app. Each user gets a reply after their feedback has been received.
+
 
   # Features
 
   - Referral System
-    Users can generate unique referral links.
+    Users can generate unique referral links that includes their User's ID.
     Points are awarded to users when someone signs up using their referral link.
     Detailed analytics and reporting on referral activities.
   - Point System
@@ -156,7 +162,7 @@ If you already have an account, log in using these steps:
 - React: Frontend framework for building user interfaces.
 - JavaScript: Programming language used for frontend logic.
 - HTML/CSS: Markup and styling languages for structuring and styling the UI.
-- Local Storage: Used to store and retrieve points for each user.
+- Firebase: Used to store and retrieve points for each user.
 - API: A food api may analyze recipe costs and nutritional values,classify foods into allergens,compute meal plans, etc. Spoonacular food and recipe api is the only API you will ever need. Its effficient and reliable.
 - API: A form api that captures all feedback sent in the feedback section of the app. Each user gets a reply after their feedback has been received.
 
@@ -167,7 +173,7 @@ If you already have an account, log in using these steps:
 - Tailwind CSS
 - Github
 - API (https://spoonacular.com/food-api)
-- API (https://www.emailjs.com/docs/)
+- Feedback API (https://www.emailjs.com/docs/)
 
 ## Hosted Project
 
