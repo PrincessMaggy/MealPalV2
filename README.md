@@ -105,6 +105,9 @@ If you already have an account, log in using these steps:
 
 - Babatunde Maryam [Joyfuol](https://github.com/Joyfuol/MealPalV2.git)
 
+### Team Three
+-Michelle Kurgat[Cheriahkay](https://github.com/cheriahkay/MealPalV2)
+
 
   # Overview
 
@@ -131,6 +134,39 @@ If you already have an account, log in using these steps:
   - Meal Plan Points: [sarahlutaaya256] developed the functionality related to meal plan points, including tracking user activities and assigning points accordingly.
 
   - Referral Link, Copy Link and Share Button: [Eucharian8] made the referral link redirect the new user to the signup page. Improved the UI of the referral link copy button and added a share button.
+
+  ### Team Three Contributions
+
+  ## Features
+
+- **Search Bar**: Allows users to search for meals by name.
+- **Meal Details Page**: Displays detailed information about a meal, including an image, nutritional value, ingredients, and a video tutorial link.
+- **Recommended Meals Page**: Lists meals in a vertical order, with options to filter by category.
+- **Dynamic Content Rendering**: Clicking on a meal from the recommended page navigates to the meal detail page with the corresponding information.
+
+## Components and Pages
+### 1. RecommendedPage Component
+
+The `RecommendedPage` component displays a list of recommended meals in a vertical format. It includes:
+
+- **Search Bar**: Allows users to search for meals by name.
+- **Category Buttons**: Filter meals by categories such as Recommended, Popular, Classic, and Flexitarian.
+- **Meal List**: Displays meals with an image, name, cuisine type, and category tag. Clicking on a meal navigates to the meal detail page.
+
+### 2. MealDetail Component
+
+The `MealDetail` component displays detailed information about a specific meal. It includes the following sections:
+
+- **Search Bar**: Allows users to search for meals within the app.
+- **Meal Image**: Displays the meal image, which can be clicked to view in full screen.
+- **Cooking Time, Serving Amount, and Rating**: Displayed horizontally with a grey background.
+- **Nutritional Value**: Lists nutritional information with quantities.
+- **Ingredients**: Lists ingredients with quantities.
+- **Video Tutorial**: Provides a link to a video tutorial on YouTube.
+
+
+
+
 
   # Features
 
