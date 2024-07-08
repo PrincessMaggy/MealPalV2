@@ -1,39 +1,50 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { meals } from "../Data";
+import iconButton from "/src/assets/IconButton.png";
+    
 
 const MealDetail = () => {
   const { id } = useParams();
   const meal = meals.find((meal) => meal.id.toString() === id);
+  const [searchTerm, setSearchTerm] = useState("");
   const [imageFullScreen, setImageFullScreen] = useState(false);
 
-  // Function to convert different YouTube URL formats to embed URL
-  const getEmbedUrl = (url) => {
-    let videoId;
-    if (url.includes("v=")) {
-      videoId = url.split("v=")[1].split("&")[0];
-    } else if (url.includes("youtu.be/")) {
-      videoId = url.split("youtu.be/")[1].split("?")[0];
-    } else if (url.includes("/embed/")) {
-      videoId = url.split("/embed/")[1].split("?")[0];
-    } else {
-      console.error("Invalid YouTube URL");
-      return "";
-    }
-    return `https://www.youtube.com/embed/${videoId}`;
+  if (!meal) {
+    return (
+      <div className="text-center text-xl font-semibold mt-10">
+        Meal not found
+      </div>
+    );
+  }
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
   };
+
+  const filteredMeals = meals.filter((meal) =>
+    meal.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="p-6 max-w-4xl mx-auto bg-white rounded-xl shadow-md space-y-6">
+      <div className="flex items-center space-x-4 mb-6">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleSearch}
+          placeholder="Search for a meal"
+          className="p-2 border rounded-md w-full"
+        />
+        <img src={iconButton} alt="Filter" className="h-8 w-8 cursor-pointer" />
+      </div>
       <div className="card bg-gray-100 p-4 rounded">
         <h1 className="text-3xl font-bold text-gray-900">{meal.name}</h1>
         <div className="relative mt-4">
           <img
             src={meal.image}
             alt={meal.name}
-            className={`object-cover w-full rounded ${
-              imageFullScreen ? "fixed top-0 left-0 w-full h-full z-50" : "h-64"
-            }`}
+            className={`object-cover w-full rounded ${imageFullScreen ? 'fixed top-0 left-0 w-full h-full z-50' : 'h-64'}`}
             onClick={() => setImageFullScreen(!imageFullScreen)}
           />
           {imageFullScreen && (
@@ -46,21 +57,15 @@ const MealDetail = () => {
           )}
         </div>
         <div className="flex justify-around mt-4 bg-gray-200 p-2 rounded">
-          <div className="text-gray-700">
-            🕒 cooking time (1Hr 10 min) {meal.cookTime}
-          </div>
-          <div className="text-gray-700">
-            🍽️ Meal serving (1) {meal.serving}
-          </div>
+          <div className="text-gray-700">🕒 cooking time(1Hr 10 min){meal.cookTime}</div>
+          <div className="text-gray-700">🍽️ Meal serving(1){meal.serving}</div>
           <div className="text-gray-700">⭐Meal Rating {meal.rating}</div>
         </div>
       </div>
 
       {meal.nutritionalValue && (
         <div className="card bg-gray-100 p-4 rounded mt-4">
-          <h2 className="text-2xl font-semibold text-gray-700">
-            Nutritional Information
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700">Nutritional Information</h2>
           <ul className="mt-2">
             {meal.nutritionalValue.map((nutrition, index) => (
               <li className="flex justify-between" key={index}>
@@ -90,20 +95,13 @@ const MealDetail = () => {
 
       {meal.videoTutorial && (
         <div className="card bg-gray-100 p-4 rounded mt-4">
-          <h2 className="text-2xl font-semibold text-gray-700">
-            Video Tutorial
-          </h2>
+          <h2 className="text-2xl font-semibold text-gray-700">Video Tutorial</h2>
           <div className="flex justify-center mt-2">
-            <iframe
-              width="560"
-              height="315"
-              src={getEmbedUrl(meal.videoTutorial)}
-              title="Video Tutorial"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded"
-            ></iframe>
+            <img
+              src={meal.videoThumbnail}
+              alt="Video thumbnail"
+              className="w-[150px] h-[120px] object-cover rounded"
+            />
           </div>
           <a
             href={meal.videoTutorial}
@@ -115,8 +113,31 @@ const MealDetail = () => {
           </a>
         </div>
       )}
+      
+      {filteredMeals.length > 0 && (
+        <div className="card bg-gray-100 p-4 rounded mt-4">
+          <h2 className="text-2xl font-semibold text-gray-700">Search Results</h2>
+          <ul className="mt-2">
+            {filteredMeals.map((filteredMeal) => (
+              <li
+                key={filteredMeal.id}
+                className="flex justify-between space-y-2"
+              >
+                <div className="w-[40%]">{filteredMeal.name}</div>
+                <div className="flex w-[60%]">
+                  <p className="text-start w-full">
+                    {filteredMeal.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      
+      )}
     </div>
   );
 };
+
 
 export default MealDetail;

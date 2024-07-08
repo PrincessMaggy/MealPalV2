@@ -22,9 +22,7 @@ function FAQPage() {
             >
               {item.question}
             </h4>
-            {visible[index] && (
-              <p className="text-lg font-semibold">{item.answer}</p>
-            )}
+            {visible[index] && <p className="text-lg font-semibold">{item.answer}</p>}
           </li>
         ))}
       </ul>

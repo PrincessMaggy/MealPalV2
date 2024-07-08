@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import emailjs from 'emailjs-com';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const FeedbackForm = ({ onNext }) => {
   const navigate = useNavigate();
@@ -34,8 +34,7 @@ const FeedbackForm = ({ onNext }) => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-top mt-6 h-screen'>
-      <div className='w-[390px] bg-white shadow-md rounded-lg' >
+    <div className='p-6 space-y-6 w-[390px]'>
       <form id="Feedback-form" className="p-6 space-y-6 w-[390px]" onSubmit={sendFeedback}>
         <h2 className="text-[#101010] font-manrope text-lg font-semibold">
           Share your feedback
@@ -46,10 +45,10 @@ const FeedbackForm = ({ onNext }) => {
         <p className="text-[#777] font-manrope text-sm font-medium leading-[140%]">
           Select from list
         </p>
-        <div className="space-y-2 flex flex-col text-nowrap">
+        <div className="space-y-2 flex flex-col">
           {['Very satisfied', 'Somewhat satisfied', 'Neutral', 'Somewhat dissatisfied', 'Very dissatisfied'].map(option => (
             <label key={option} className="inline-flex items-center gap-2">
-              <input type="radio" name="satisfaction" value={option} className="form-radio w-4 h-4" />
+              <input type="radio" name="satisfaction" value={option} className="form-radio" />
               <span className="font-manrope text-sm font-normal">{option}</span>
             </label>
           ))}
@@ -62,20 +61,14 @@ const FeedbackForm = ({ onNext }) => {
           className="w-full h-[117px] p-2 border border-gray-300 rounded-lg"
           placeholder="Write your comment..."
         ></textarea>
-
-        <Link to={"/ThankYou"}>
         <button
           type="submit"
-          className="w-full h-[40px] flex justify-center mt-10 items-center rounded-lg
+          className="w-full h-[40px] flex justify-center items-center rounded-lg
            text-white border hover:bg-green-300 bg-green-700"
         >
           Submit
         </button>
-        </Link>
-        
       </form>
-      </div>
-     
     </div>
   );
 };

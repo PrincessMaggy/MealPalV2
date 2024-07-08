@@ -203,7 +203,7 @@ const BookmarkedPostCard = ({ id, name, logo, email, text, image, timestamp, get
             )}
             <div className="items-center flex gap-2 hover:cursor-pointer" onClick={deleteBookmark}>
               <span className="material-symbols-outlined">delete</span>
-              <span>Delete</span>
+              <span>Remove Bookmark</span>
             </div>
           </div>
         )

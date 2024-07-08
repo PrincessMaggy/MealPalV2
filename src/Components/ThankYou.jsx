@@ -9,8 +9,7 @@ const ThankYou = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-top mt-20 h-screen'>
-      <div className='w-[390px] p-6 bg-white shadow-md rounded-lg'>
+    <div className='p-6 space-y-6 w-[390px]'>
       <h2 className="text-[#101010] font-manrope text-lg font-semibold">
         Thank You!
       </h2>
@@ -20,12 +19,11 @@ const ThankYou = () => {
       <button
         type="button"
         onClick={handleClose}
-        className="w-[348px] h-[40px] flex justify-center mt-10 items-center rounded-lg
-         bg-green-700 hover:bg-green-300 text-white hover:w[358px]"
+        className="w-full h-[40px] flex justify-center items-center rounded-lg
+         bg-green-700 hover:bg-green-300 text-white"
       >
         Close
       </button>
-      </div>
     </div>
   );
 };

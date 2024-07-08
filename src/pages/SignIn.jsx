@@ -3,7 +3,7 @@ import Google from "../assets/google.png";
 import Facebook from "../assets/facebook.png";
 import Loader from "../Components/OnboardingLoader";
 import { useEffect, useState } from "react";
-import { auth,  } from "../firebase/firebase";
+import { auth } from "../firebase/firebase";
 import {
   signInWithEmailAndPassword,
   signInWithRedirect,
@@ -19,7 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
-  const SignIn = () => {
+const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -30,13 +30,12 @@ import { useForm } from "react-hook-form";
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
 
-  
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   const handleSignIn = ({ email, password }) => {
-    setIsLoading(true);    
+    setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
@@ -111,7 +110,7 @@ import { useForm } from "react-hook-form";
     reset();
     navigate("/");
   }
-  
+
   return (
     <>
       <div className="min-h-screen flex flex-col gap-y-5 justify-center lg:items-center mx-6">
