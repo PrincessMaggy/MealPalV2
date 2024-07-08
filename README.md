@@ -123,8 +123,17 @@ If you already have an account, log in using these steps:
 
 - Meal list : [Joyfuol] Updated the recommended meal plans by adding different types of cuisines which includes  African dishes, Chinese dishes and Mexican dishes.
 
+- Meal list :[cheriahkay]Updated the recommended meal plans by adding additionl cusines which includes:Italian cusines,Indian cusines as well as Japanese cuisines.Created Dynamic Content Rendering: Clicking on a meal from the recommended page navigates to the meal detail page with the corresponding information.
+
 - Meal Details : [Joyfuol] Created meal details page which displays details about the meal starting from ingredients, nutritional values and video tutorial on how to make it.
 
+- Meal Details:[cheriahkay]Updated the meal details page to contain the following aspects:
+ Card display:ALL the ifomation on the nutritional value ,ingredients and video link are contained in different cards with a grey background to section off the different aspects.
+
+- Meal Image: [cheriahkay] created the meal displays of the meal image, which can be clicked to view in full screen.
+
+- Additional information:[cheriahkay] created the Cooking Time, Serving Amount, and Rating section: Displayed       horizontally with a grey background.
+ 
 - Search Bar   : [Joyfuol] Added a search bar option to the recommended meals which enables easy search instead of scrolling through a long search.
 
 - FAQ : [Joyfuol] FAQ serve as an app guide. I created a FAQ page to solve any problem users might encounter while navigating through the app.
@@ -134,39 +143,6 @@ If you already have an account, log in using these steps:
   - Meal Plan Points: [sarahlutaaya256] developed the functionality related to meal plan points, including tracking user activities and assigning points accordingly.
 
   - Referral Link, Copy Link and Share Button: [Eucharian8] made the referral link redirect the new user to the signup page. Improved the UI of the referral link copy button and added a share button.
-
-  ### Team Three Contributions
-
-  ## Features
-
-- **Search Bar**: Allows users to search for meals by name.
-- **Meal Details Page**: Displays detailed information about a meal, including an image, nutritional value, ingredients, and a video tutorial link.
-- **Recommended Meals Page**: Lists meals in a vertical order, with options to filter by category.
-- **Dynamic Content Rendering**: Clicking on a meal from the recommended page navigates to the meal detail page with the corresponding information.
-
-## Components and Pages
-### 1. RecommendedPage Component
-
-The `RecommendedPage` component displays a list of recommended meals in a vertical format. It includes:
-
-- **Search Bar**: Allows users to search for meals by name.
-- **Category Buttons**: Filter meals by categories such as Recommended, Popular, Classic, and Flexitarian.
-- **Meal List**: Displays meals with an image, name, cuisine type, and category tag. Clicking on a meal navigates to the meal detail page.
-
-### 2. MealDetail Component
-
-The `MealDetail` component displays detailed information about a specific meal. It includes the following sections:
-
-- **Search Bar**: Allows users to search for meals within the app.
-- **Meal Image**: Displays the meal image, which can be clicked to view in full screen.
-- **Cooking Time, Serving Amount, and Rating**: Displayed horizontally with a grey background.
-- **Nutritional Value**: Lists nutritional information with quantities.
-- **Ingredients**: Lists ingredients with quantities.
-- **Video Tutorial**: Provides a link to a video tutorial on YouTube.
-
-
-
-
 
   # Features
 
@@ -182,6 +158,10 @@ The `MealDetail` component displays detailed information about a specific meal. 
     Points are awarded based on adherence to the plan, healthy eating choices, and consistency.
   - Create Meal Plan
     Enhance the ability for users to create customized meal plans based on dietary preferences, health goals, and calorie requirements. 
+  - Dynamic Content Rendering
+    Clicking on a meal from the recommended page navigates to the meal detail page with the corresponding information.
+  - Full screen display
+    Users can view the imagein full screen by clicking on it in the meal list page.
 
   # Installation
 
