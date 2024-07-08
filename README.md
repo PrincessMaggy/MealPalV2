@@ -184,8 +184,10 @@ If you already have an account, log in using these steps:
   - Cooking Time, Meal Serving, and Rating: [cheriahkay] integrated these features into the meal detail page
    - Cooking time, meal serving amount, and rating are now displayed horizontally with a gray background below the meal image for quick reference.
 
-   - Dynamic Content Rendering: [cheriahkay] implemented dynamic content rendering
+  - Dynamic Content Rendering: [cheriahkay] implemented dynamic content rendering
     - The app dynamically updates the meal detail page based on the selected meal from the recommended meals page. Users can seamlessly navigate between different meal details.
+
+  - YouTube Video Embedding: [cheriahkay] created Embedded YouTube video tutorials directly in the meal detail page using the `react-youtube` component. Ensuring video thumbnails are displayed correctly and play without errors. 
 
 
   # Features
