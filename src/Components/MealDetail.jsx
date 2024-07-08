@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import YouTube from 'react-youtube';
 import { meals } from "../Data";
 import iconButton from "/src/assets/IconButton.png";
 
@@ -24,6 +25,18 @@ const MealDetail = () => {
   const filteredMeals = meals.filter((meal) =>
     meal.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  const onPlayerError = (event) => {
+    console.error('Error occurred during video playback:', event.data);
+  };
 
   return (
     <div className="p-6 max-w-4xl mx-auto bg-white rounded-xl shadow-md space-y-6">
@@ -56,9 +69,9 @@ const MealDetail = () => {
           )}
         </div>
         <div className="flex justify-around mt-4 bg-gray-200 p-2 rounded">
-          <div className="text-gray-700">🕒 cooking time(1Hr 10 min){meal.cookTime}</div>
-          <div className="text-gray-700">🍽️ Meal serving(1){meal.serving}</div>
-          <div className="text-gray-700">⭐Meal Rating {meal.rating}</div>
+          <div className="text-gray-700">🕒 Cooking Time: {meal.cookTime}</div>
+          <div className="text-gray-700">🍽️ Serving Amount: {meal.serving}</div>
+          <div className="text-gray-700">⭐ Rating: {meal.rating}</div>
         </div>
       </div>
 
@@ -96,11 +109,7 @@ const MealDetail = () => {
         <div className="card bg-gray-100 p-4 rounded mt-4">
           <h2 className="text-2xl font-semibold text-gray-700">Video Tutorial</h2>
           <div className="flex justify-center mt-2">
-            <img
-              src={meal.videoThumbnail}
-              alt="Video thumbnail"
-              className="w-[150px] h-[120px] object-cover rounded"
-            />
+            <YouTube videoId={meal.videoId} opts={opts} onError={onPlayerError} />
           </div>
           <a
             href={meal.videoTutorial}
