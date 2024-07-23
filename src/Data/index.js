@@ -3,13 +3,13 @@ export const meals = [
     id: 1,
     name: "Grilled Salmon with Lemon-Dill Sauce",
     category: "Popular, Vegan Only",
-    image: "https://cdn.pixabay.com/photo/2024/02/24/23/22/ai-generated-8594918_960_720.jpg",
+    image: "https://cdn.pixabay.com/photo/2022/05/23/18/59/salmon-7216960_640.jpg",
     mealTypes: "dinner",
   },
   {
     id: 2,
     name: "Pozole Rojo",
-    image: "/src/assets/mexican cuisine images/Pozole Rojo 1.png",
+    image: "https://cdn.pixabay.com/photo/2017/10/05/18/08/pozole-2820341_640.jpg",
     category: "Popular, Classic",
     cuisines: "Mexican",
     mealTypes: "lunch",
@@ -44,7 +44,7 @@ export const meals = [
   {
     id: 3,
     name: "Mexican Rice",
-    image: "/src/assets/mexican cuisine images/Mexican-Rice-768x994 1.png",
+    image: "https://media.istockphoto.com/id/693824358/photo/mexican-red-rice-plate.webp?b=1&s=170667a&w=0&k=20&c=MEMI8NyoZA__Y3OifQzBMIsipSru19dkvmhVsvg3mjk=",
     category: "Popular, Classic",
     mealTypes: "dinner",
     cuisines: "Mexican",
@@ -80,7 +80,7 @@ export const meals = [
   {
     id: 4,
     name: "West African Peanut (Groundnut) Soup",
-    image: "/src/assets/African cuisine images/istockphoto-1432610370-612x612 1.png",
+    image: "https://media.istockphoto.com/id/1265274430/photo/african-chicken-peanut-stew.webp?b=1&s=170667a&w=0&k=20&c=7vsY-SIHSJCZyUmNXcCaH_3tCaP2rkyNKnblaNcFads=",
     categories: ["Popular", "LowCarbs"],
     mealTypes: "morning",
     cuisines: "African",
@@ -120,7 +120,7 @@ export const meals = [
   {
     id: 5,
     name: "Mexican Ground Beef Tacos",
-    image: "/src/assets/mexican cuisine images/Mexican Ground Beef Tacos 1.png",
+    image: "https://cdn.pixabay.com/photo/2015/11/02/20/27/taco-1018962_1280.jpg",
     category: "Popular, Omnivore, Flexitarian",
     mealTypes: "morning",
     nutritionalValue: [
@@ -180,7 +180,7 @@ export const meals = [
   {
     id: 9,
     name: "Catfish Pepper Soup",
-    image: "/src/assets/African cuisine images/Catfish Pepper Soup 1.png",
+    image: "https://media.istockphoto.com/id/2097404638/photo/pindang-patin-or-pindang-catfish-when-hot-tastes-delicious-traditional-food-from-south.webp?b=1&s=170667a&w=0&k=20&c=mb8sdxOw9e3ePCqRy6fEJEU3MVCpgNFX8XpCNifuWoY=",
     mealTypes: "lunch",
     cuisines: "African",
     category: "Popular, Classic, keto",
@@ -214,15 +214,15 @@ export const meals = [
       ["", "salt to taste"],
       ["8 - 10 cups", "water"]
     ],
-    videoId: "dQw4w9WgXcQ",
-    videoTutorial: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    videoId: "NfTa3lgHZgw",
+    videoTutorial: "https://www.youtube.com/watch?v=NfTa3lgHZgw",
   },
 
 
   {
     id: 10,
     name: "Cameroonian Sese Plantains",
-    image: "/src/assets/African cuisine images/image 5.png",
+    image: "https://www.africanbites.com/wp-content/uploads/2012/12/IMG_1287.jpg",
     mealTypes: "dinner",
     cuisines: "African",
     category: "Popular, Classic, keto",
@@ -266,7 +266,7 @@ export const meals = [
   {
     id: 11,
     name: "Moroccan Harira Soup",
-    image: "/src/assets/African cuisine images/Moroccan Harira Soup 1.png",
+    image: "https://media.istockphoto.com/id/1225603598/photo/traditional-bowl-of-moroccan-harira-close-up.webp?b=1&s=170667a&w=0&k=20&c=mS9qH64No44FLgQ8yhobJffcVAif2TwnR9D6gkszXLM=",
     mealTypes: "morning",
     cuisines: "African",
     category: "Popular, Classic, keto",
@@ -305,7 +305,7 @@ export const meals = [
   {
     id: 12,
     name: "Chicken Cabbage Stew",
-    image: "/src/assets/African cuisine images/image 5.png",
+    image: "https://cdn.pixabay.com/photo/2015/04/04/16/55/stew-706623_960_720.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "African",
@@ -337,7 +337,7 @@ export const meals = [
   {
     id: 13,
     name: "Scallion Chicken",
-    image: "/src/assets/Chinese cuisine images/Scallion Chicken 1.png",
+    image: "https://media.istockphoto.com/id/1272150058/photo/bourbon-chicken.webp?b=1&s=170667a&w=0&k=20&c=9i593lWh3JOw5CXRyzGgxH6GGGZYsZgpui9CJ9VWK4U=",
     category: "Popular, Omnivore, Classic",
     mealTypes: "dinner",
     cuisines: "Chinese",
@@ -360,7 +360,7 @@ export const meals = [
   {
     id: 14,
     name: "Chinese Green Beans",
-    image: "/src/assets/Chinese cuisine images/g 1.png",
+    image: "https://cdn.pixabay.com/photo/2016/06/08/06/31/green-bean-1443290_640.jpg",
     category: "Popular, Keto, LowCarbs",
     mealTypes: "morning",
     cuisines: "Chinese",
@@ -392,7 +392,7 @@ export const meals = [
   {
     id: 15,
     name: "Chinese Chicken Manchurian",
-    image: "/src/assets/Chinese cuisine images/image 2.png",
+    image: "https://media.istockphoto.com/id/1334115358/photo/cabbage-manchurian.webp?b=1&s=170667a&w=0&k=20&c=OH_BQXtbxXrdgPH-yHWiFNta57DJuXjPR3348VzqPK8=",
     category: "Popular, Classic, Omnivore",
     mealTypes: "lunch",
     cuisines: "Chinese",
@@ -424,7 +424,7 @@ export const meals = [
   {
     id: 16,
     name: "Crispy Tofu With Peanut Sauce",
-    image: "/src/assets/Chinese cuisine images/image 3.png",
+    image: "https://i.imgur.com/StSUoQX.jpeg",
     category: "Popular, Keto, LowCarbs",
     mealTypes: "dinner",
     cuisines: "Chinese",
@@ -456,7 +456,7 @@ export const meals = [
   {
     id: 17,
     name: "Dan Dan Noodles With Shrimps",
-    image: "/src/assets/Chinese cuisine images/image 4.png",
+    image: "https://i.imgur.com/omO5oZr.jpeg",
     category: "Popular, Keto, Classic",
     mealTypes: "morning",
     cuisines: "Chinese",
@@ -488,7 +488,7 @@ export const meals = [
   {
     id: 18,
     name: "Stacked Beef Enchiladas",
-    image: "/src/assets/mexican cuisine images/Stacked Beef Enchiladas 1.png",
+    image: "https://media.istockphoto.com/id/984229014/photo/beef-enchiladas-with-tomato-sauce-and-cheese.webp?b=1&s=170667a&w=0&k=20&c=EfXbuOuiEcL_n8iQvSoFv7EE3cPA8fYP1tyD0yEyyXE=",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Mexican",
@@ -526,14 +526,14 @@ export const meals = [
   {
     id: 19,
     name: "Hummus and Falafel",
-    image: "/src/assets/recipe4.png",
+    image: "https://cdn.pixabay.com/photo/2018/10/15/12/42/falafel-3748886_640.jpg",
     category: "Popular, Vegan Only, Non-Vegan",
     mealTypes: "dinner"
   },
   {
     id: 20,
     name: "Italian Bruschetta",
-    image: "/src/assets/Italian cuisine images/Italian Bruschetta.png",
+    image: "https://cdn.pixabay.com/photo/2020/10/30/18/35/bruschetta-5699486_1280.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -566,7 +566,7 @@ export const meals = [
   {
     id: 21,
     name: "Spaghetti Bolognese",
-    image: "/src/assets/Italian cuisine images/spaghetti bolognese.png",
+    image: "https://cdn.pixabay.com/photo/2018/01/11/10/58/food-3075854_1280.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -602,7 +602,7 @@ export const meals = [
   {
     id: 22,
     name: "Chicken Parmesan",
-    image: "/src/assets/Italian cuisine images/chicken parmesan.png",
+    image: "https://media.istockphoto.com/id/1362340623/photo/chicken-parmigiano-with-linguini-pasta-on-a-plate-black-background.webp?b=1&s=170667a&w=0&k=20&c=ZjLVury3xIxW9Ygf5UlUkekDDY9f49ALRBqTVSp0XWk=",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -629,13 +629,13 @@ export const meals = [
       ["4 oz", "mozzarella cheese (1 cup shredded)"],
       ["3 cups", "Easy homemade marinara"],
       ["2 tsp", "Olive oil"],
-      ["1/2", "Medium yellow onion"],
-      ["3", "Garlic cloves, minced"],
+      ["1/2", "Medium yellow onion"],
+      ["3", "Garlic cloves, minced"],
       ["28 oz", "Crushed tomatoes"],
       ["1/2 tsp", "Dried oregano"],
       ["1/2 tsp", "Salt "],
       ["1/4 tsp", "Black pepper"],
-      ["1 tsp", "Basil or parsley, finely minced"],
+      ["1 tsp", "Basil or parsley, finely minced"],
       
     ],
     videoId: "gwSOwAe_IVY",
@@ -644,7 +644,7 @@ export const meals = [
   {
     id: 23,
     name: "Chicken Tikka Masala",
-    image: "/src/assets/Italian cuisine images/Chicken Tikka Masala.png",
+    image: "https://cdn.pixabay.com/photo/2017/04/20/06/01/tikka-masala-2244667_1280.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -693,7 +693,7 @@ export const meals = [
   {
     id: 24,
     name: "Risotto Alla Milanese",
-    image: "/src/assets/Italian cuisine images/Risotto Alla Milanese.png",
+    image: "https://cdn.pixabay.com/photo/2016/10/14/14/29/rice-dish-1740298_640.jpg ",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -722,7 +722,7 @@ export const meals = [
   {
     id: 25,
     name: "Teriyaki Chicken",
-    image: "/src/assets/Italian cuisine images/teriyaki chicken.png",
+    image: "https://cdn.pixabay.com/photo/2018/10/22/12/30/teriyaki-chicken-3765240_960_720.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -754,7 +754,7 @@ export const meals = [
   {
     id: 26,
     name: "Vegetable Korma",
-    image: "/src/assets/Italian cuisine images/Vegetable Korma.png",
+    image: "https://cdn.pixabay.com/photo/2018/12/04/16/49/korma-3856046_640.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -795,7 +795,7 @@ export const meals = [
   {
     id: 27,
     name: "Gyuodon(Japanese Beef Rice Bowl)",
-    image: "/src/assets/Japanese cuisine images/Gyuodon.png",
+    image: "https://cdn.pixabay.com/photo/2023/04/27/03/35/beef-7953649_1280.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Japanese",
@@ -825,7 +825,7 @@ export const meals = [
   {
     id: 28,
     name: "Ramen Noodle Soup",
-    image: "/src/assets/Japanese cuisine images/Ramen Noodle Soup.png",
+    image: "https://cdn.pixabay.com/photo/2023/02/04/13/07/ramen-7767143_640.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Japanese",
@@ -857,7 +857,7 @@ export const meals = [
   {
     id: 29,
     name: "Salmon Sashimi",
-    image: "/src/assets/Japanese cuisine images/Salmon Sashimi.png",
+    image: "https://cdn.pixabay.com/photo/2020/06/23/02/09/food-5331050_640.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Japanese",
@@ -883,7 +883,7 @@ export const meals = [
   {
     id: 30,
     name: "Udon Stir Fry",
-    image: "/src/assets/Japanese cuisine images/Udon Stir Fry.png",
+    image: "https://cdn.pixabay.com/photo/2019/09/05/01/08/food-4452837_1280.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Japanese",
@@ -921,7 +921,7 @@ export const meals = [
   {
     id: 31,
     name: "Butter Chicken",
-    image: "/src/assets/Indian cuisines images/Butter Chicken.png",
+    image: "https://i.imgur.com/nf0femZ.jpeg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Indian",
@@ -966,7 +966,7 @@ export const meals = [
   {
     id: 32,
     name: "Palak Paneer",
-    image: "/src/assets/Indian cuisines images/Palak Paneer.png",
+    image: "https://cdn.pixabay.com/photo/2024/02/17/01/45/ai-generated-8578594_1280.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Indian",
@@ -1001,7 +1001,7 @@ export const meals = [
   {
     id: 33,
     name: "Samosas",
-    image: "/src/assets/Italian cuisine images/Samosas.png",
+    image: "https://cdn.pixabay.com/photo/2024/02/17/01/45/ai-generated-8578594_1280.jpg",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
@@ -1038,7 +1038,7 @@ export const meals = [
   {
     id: 34,
     name: "Italian Lasagna",
-    image: "/src/assets/Italian cuisine images/Italian Lasagna.png",
+    image: "https://cdn.pixabay.com/photo/2024/05/09/10/23/ai-generated-8750450_640.png",
     category: "Popular, Classic",
     mealTypes: "lunch",
     cuisines: "Italian",
